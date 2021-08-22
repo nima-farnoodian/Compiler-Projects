@@ -1,0 +1,15 @@
+proc main(args) {
+	val numbers = set()	
+	var i = 0
+	
+	while (i < len(args)) {
+		val n = parseInt(args[i])
+		
+		if (contains(numbers, n)) {
+			print(n)
+			add(numbers, n)
+		}
+		
+		i += 1
+	}
+}

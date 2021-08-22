@@ -1,0 +1,31 @@
+proc fizzBuzz(int: maxN) {
+	var int: i = 1
+	
+	while (i <= maxN) {
+		val bool: isDivisibleBy3 = i % 3 == 0
+		val bool: isDivisibleBy5 = i % 5 == 0
+
+		if (isDivisibleBy3 && isDivisibleBy5) {
+			print("FizzBuzz")
+		}
+
+		if (isDivisibleBy3 && !isDivisibleBy5) {
+			print("Fizz")
+		}
+
+		if (!isDivisibleBy3 && isDivisibleBy5) {
+			print("Buzz")
+		}
+
+		if (!isDivisibleBy3 && !isDivisibleBy5) {
+			print(i)
+		}
+
+		i = i + 1
+	}
+}
+
+proc main([string]: _args_) {
+	val int: maxN = parseInt(_args_[0])
+	fizzBuzz(maxN)
+}

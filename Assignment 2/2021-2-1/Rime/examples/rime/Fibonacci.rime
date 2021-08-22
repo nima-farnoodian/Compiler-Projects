@@ -1,0 +1,17 @@
+proc fibonacci(int: a, int: b, int: maxN) {
+	if (maxN == 0) {
+		exit
+	}
+	
+	print(a)
+	fibonacci(b, a + b, maxN - 1)
+}
+
+proc fibonacci(int: maxN) {
+	fibonacci(0, 1, maxN)
+}
+
+proc main([string]: args) {
+	val int: maxN = parseInt(args[0])
+	fibonacci(maxN)
+}

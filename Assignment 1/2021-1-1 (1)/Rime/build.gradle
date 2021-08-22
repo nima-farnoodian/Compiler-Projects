@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group 'com.lingi2132.project'
+version '1.0-SNAPSHOT'
+
+test {
+    useJUnitPlatform()
+}
+
+repositories {
+    mavenCentral()
+    jcenter()
+    maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+    implementation 'org.junit.jupiter:junit-jupiter:5.4.2'
+    implementation 'org.jetbrains:annotations:19.0.0'
+    testImplementation group: 'junit', name: 'junit', version: '4.12'
+    implementation 'com.github.norswap:autumn:1.0.6'
+    implementation 'com.google.auto.value:auto-value-annotations:1.6.2'
+    annotationProcessor 'com.google.auto.value:auto-value:1.6.2'
+}

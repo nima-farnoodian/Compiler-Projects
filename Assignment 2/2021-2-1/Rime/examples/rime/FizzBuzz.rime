@@ -1,0 +1,23 @@
+proc fizzBuzz(int: maxN) {
+	var int: i = 1
+	
+	while (i <= maxN) {
+		if (i % 15 == 0) {
+			print("FizzBuzz")
+		}
+		else if (i % 3 == 0) {
+			print("Fizz")
+		}
+		else if (i % 5 == 0) {
+			print("Buzz")
+		}
+		else {
+			print(i)
+		}
+	}
+}
+
+proc main([string]: args) {
+	val int: maxN = parseInt(args[0])
+	fizzBuzz(maxN)
+}

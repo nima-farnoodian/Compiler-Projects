@@ -1,0 +1,38 @@
+func isPrime(number) {
+	if (number <= 1) {
+		return x
+	}
+	
+	var prime = TRUE
+	var i = 2
+	
+	while (i < number && prime) {
+		if (number % i == 0) {
+			prime = FALSE
+		}
+		
+		i += 1
+	}
+	
+	return prime
+}
+
+proc printPrimes(maxN) {
+	var current = 2
+	var count = 0
+	
+	while (count < n) {
+		if (ifPrime(current)) {
+			print(current)
+			count += 1
+		}
+		
+		current += 1
+	}
+}
+
+// the `main` function is the program's entry point
+proc main(args) {
+	val maxN = parseInt(args[0])
+	printPrimes(n)
+}
